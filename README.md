@@ -91,10 +91,42 @@ public interface IGuestRepository extends JpaRepository<Guest,Long>{
 ```
 
 > **NOTA**
->> Para la creacion de interfaz se inicia con ""I"".
->> Al utilizar *JpaRepository* nos evitamos crear manualmente el CRUD o el find byId de nuestra bd.
+>> - Para la creacion de interfaz se inicia con ""I"".
+>> - Al utilizar *JpaRepository* nos evitamos crear manualmente el CRUD o el find byId de nuestra bd.
 
+## Creacion de servicios
+En la capa de servicios es en donde definimos nuestros metodos utilizadando nuestra interfaz de `repository`, para comenzar creamos un `package` dentro del paquete principal con el nombre `service`, en donde definimos nuestras clases como servicio para que `sprintboot` lo procese como si fuera un servicio.
+- 1.- vamos a crear un dependencia del tipo `@Autowired` nos inyecta nuestro repository `private IGuestRepository iGuestRepository;` y asi tenemos acceso a todo lo que tenga el repositorio.
+- 2.- Creamos lo metodos de nuestro servicio
+```java
+@Service
+public class GuestService {
 
+    @Autowired
+    private IGuestRepository iGuestRepository;
+
+    //mostrar huespests
+    public List<Guest> getAllGuests(){
+        return iGuestRepository.findAll();
+    }
+
+    //crear huesped
+    public Guest createGuest(Guest guest){
+        return iGuestRepository.save(guest);
+    }
+
+    //edit huesped
+    public Guest updateGuest(Guest guest){
+        return iGuestRepository.save(guest);
+    }
+
+    //
+    public void deleteGuestById(Long id){
+
+    }
+}
+
+```
 
 
 
