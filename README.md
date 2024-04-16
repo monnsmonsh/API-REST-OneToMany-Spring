@@ -20,6 +20,7 @@ La API REST permite gestionar entidades de tipo "padre" y "hijo", donde un "padr
 - IntelliJ IDEA
 - Postman
 
+## Creacion de la API
 Para poder crear una api en java con sprint, lo primero que necesitamos es configurar nuestro proyecto de `spring` con dependencias de maven, como en la siguiente imagen se muestra.
 Las dependecias seran:
   - **Spring Web:** nos ayuda ejecutar y a utlizar todas las tecnologias de springweb (API Rest) y crea nuestro servidor en Tomcat
