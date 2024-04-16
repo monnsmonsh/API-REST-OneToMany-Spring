@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("app/v1/huespedes")
+@RequestMapping("app/v1/huespedes")//ruta de la api
 public class GuestController {
 
     @Autowired
