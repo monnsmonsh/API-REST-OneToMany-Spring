@@ -1,5 +1,6 @@
-# Como crear una API Rest con relacion en Spring
-En este repositorio se explica como crear API Rest en Spring Boot junto con su implementación CRUD para crear, leer, actualizar y eliminar, que implementa una relación uno a muchos entre dos entidades. Utiliza una base de datos H2 en memoria para almacenar los datos.
+# Como crear una API REST con Relación Uno a Muchos usando Spring Boot
+
+Este repositorio contiene una guía detallada sobre cómo crear una API REST en Spring Boot junto con su implementación CRUD para crear, leer, actualizar y eliminar entidades, además de mostrar cómo implementar una relación uno a muchos entre dos entidades. Utiliza una base de datos H2 en memoria para almacenar los datos.
 
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
@@ -12,9 +13,12 @@ En este repositorio se explica como crear API Rest en Spring Boot junto con su i
 ## Descripción
 La API REST permite gestionar entidades de tipo "padre" y "hijo", donde un "padre" puede tener múltiples "hijos". Proporciona endpoints para crear, leer, actualizar y eliminar tanto padres como hijos.
 
-
-## 🛠 Skills
-Java, sprintboot, mysql
+## 🛠 Tecnologías Utilizadas
+- Java
+- Spring Boot
+- MySQL
+- IntelliJ IDEA
+- Postman
 
 Para poder crear una api en java con sprint, lo primero que necesitamos es configurar nuestro proyecto de `spring` con dependencias de maven, como en la siguiente imagen se muestra.
 Las dependecias seran:
@@ -138,7 +142,7 @@ public class GuestService {
 
 ## Creacion de servicios
 
-Para crear nuestros controladores creamos un `package` dentro del paquete principal con el nombre `controller` en donde creamos nuestros controladores que definen el comportamiento de points y nuestras rutas.
+Para crear nuestros controladores creamos un `package` dentro del paquete principal con el nombre `controller` en donde creamos nuestros controladores que definen el comportamiento de endpoints y nuestras rutas.
 
 Crearemos un `@RestController` y un `@RequestMapping` en donde definimos la ruta `("api/v1/huespedes")`, despues realizamos una inyeccion de nuestro service y crearemos los mismos metodos, solamente que enfocados en el controlador.
 
@@ -181,7 +185,9 @@ public class GuestController {
 > **NOTA**
 >> - Recuerda que al crear y realizar seteamos por medio de un `id` *Lombok*  nos lo crea en tiempo real sin necesidad de escrir el codigo en nuestro modelo (setter & getter).
 
-## Ejecucion de nuestra API
+## Ejecución de la API
+Una vez configurado, puedes ejecutar la API y probar los endpoints utilizando herramientas como Postman.
+
 | Metodo | Type     | URL                |
 | :-------- | :------- | :------------------------- |
 | `GET` | `Listado` | localhost:8080/app/v1/huespedes |
