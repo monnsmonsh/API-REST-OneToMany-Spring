@@ -194,9 +194,30 @@ Una vez configurado, puedes ejecutar la API y probar los endpoints utilizando he
 | `DELETE` | `Eliminar` | localhost:8080/app/v1/huespedes/delete/4 |
 
 ### GET
+```url
+localhost:8080/app/v1/huespedes
+```
 <image src="https://github.com/monnsmonsh/API-REST-OneToMany-Spring/blob/main/Resoucers/Method-Get_All.png" alt=" spring">
   
 ### POST
+```json
+{
+    "name":"string",
+    "lastName":"string",
+    "birthDate":"14-11-1995",
+    "nationality":"string",
+    "phone":"string",
+    "reservations":[
+        {
+            "entryDate":"string",
+            "departureDate":"string",
+            "valor":double,
+            "wayPay":"string"
+        }
+
+    ]
+}
+```
 <image src="https://github.com/monnsmonsh/API-REST-OneToMany-Spring/blob/main/Resoucers/Method-Post.png" alt="spring">
   
 ### PUT
@@ -209,5 +230,12 @@ Una vez configurado, puedes ejecutar la API y probar los endpoints utilizando he
 > **PARA VISUALIAZAR LA BASE DE DATOS**
 >> - Recuerda que la creamos por medio de `H2 DataBase`
 
-
+## Accesos
+Para accesar a la base de datos H2 mediante URL:
+```yml
+  url: http://localhost:8080/h2-console/
+  JDBC URL: jdbc:h2:mem:hotel	
+  user: sa
+  password: 
+```
 
