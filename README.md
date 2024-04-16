@@ -91,7 +91,7 @@ public interface IGuestRepository extends JpaRepository<Guest,Long>{
 ```
 
 > **NOTA**
->> - Para la creacion de interfaz se inicia con ""I"".
+>> - Para la creacion de interfaz se inicia con **I**.
 >> - Al utilizar *JpaRepository* nos evitamos crear manualmente el CRUD o el find byId de nuestra bd.
 
 ## Creacion de servicios
@@ -127,6 +127,47 @@ public class GuestService {
 }
 
 ```
+
+## Creacion de servicios
+Para crear nuestros controladores creamos un `package` dentro del paquete principal con el nombre `controller` en donde creamos nuestros controladores que definen el comportamiento de points y nuestras rutas.
+Crearemos un `@RestController` y un `@RequestMapping` en donde definimos la ruta `("api/v1/huespedes")`, despues realizamos una inyeccion de nuestro service y crearemos los mismos metodos, solamente que enfocados en el controlador.
+```java
+@RestController
+@RequestMapping("app/v1/huespedes")
+public class GuestController {
+
+    @Autowired
+    private GuestService guestService;
+
+    //GET
+    @GetMapping
+    public List<Guest> listAll(){
+        return guestService.getAllGuests();
+    }
+
+    //POST
+    @PostMapping
+    public Guest create(@RequestBody Guest guest){
+        return guestService.createGuest(guest);
+    }
+
+    //PUT
+    @PostMapping("edit/{id}")
+    public Guest update(@RequestBody Guest guest, @PathVariable Long id){
+        guest.setIdGuest(id);
+        return guestService.updateGuest(guest);
+    }
+
+    //DELETE
+    @DeleteMapping("delete/{}")
+    public void delete(@PathVariable Long id){
+        guestService.deleteGuestById(id);
+    }
+
+}
+
+```
+
 
 
 
