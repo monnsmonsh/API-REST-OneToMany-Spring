@@ -45,6 +45,7 @@ Lo que hace `hibernate` es que actulizara el esquema de nuestra bd para que coin
             enabled: true
 ```
 
+
 ## Creacion de nuestros modelos
 Creamos un `package` dentro del paquete principal con el nombre `model` en donde almacenaremos nuestras entidades para que JPA ayude a crear directamente todos los campos y todo lo relacionado con la bd.
 
@@ -127,6 +128,7 @@ public class GuestService {
 }
 
 ```
+
 
 ## Creacion de servicios
 
