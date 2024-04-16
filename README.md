@@ -193,13 +193,16 @@ Una vez configurado, puedes ejecutar la API y probar los endpoints utilizando he
 | `PUT` | `Editar` | localhost:8080/app/v1/huespedes/edit/1 |
 | `DELETE` | `Eliminar` | localhost:8080/app/v1/huespedes/delete/4 |
 
-### GET
+### GET (listar todo)
 ```url
 localhost:8080/app/v1/huespedes
 ```
 <image src="https://github.com/monnsmonsh/API-REST-OneToMany-Spring/blob/main/Resoucers/Method-Get_All.png" alt=" spring">
   
-### POST
+### POST (crear)
+```url
+localhost:8080/app/v1/huespedes
+```
 ```json
 {
     "name":"string",
