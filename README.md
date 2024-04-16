@@ -29,10 +29,6 @@ Las dependecias seran:
 
 <image src="https://github.com/monnsmonsh/API-REST-OneToMany-Spring/blob/main/Resoucers/config_spring.png" alt="Config spring">
 
-  ## Software utilizado
-- IntelliJ IDEA 
-- Postman
-
 > No es necesario utilizar `IntelliJ IDEA` puedes utilizar cualquier otro IDE que soporte java.
 
 
