@@ -175,4 +175,26 @@ public class GuestController {
 > **NOTA**
 >> - Recuerda que al crear y realizar seteamos por medio de un `id` *Lombok*  nos lo crea en tiempo real sin necesidad de escrir el codigo en nuestro modelo (setter & getter).
 
+## Ejecucion de nuestra API
+| Metodo | Type     | URL                |
+| :-------- | :------- | :------------------------- |
+| `GET` | `Listado` | localhost:8080/app/v1/huespedes |
+| `POST` | `Crear` | localhost:8080/app/v1/huespedes |
+| `PUT` | `Editar` | localhost:8080/app/v1/huespedes/edit/1 |
+| `DELETE` | `Eliminar` | localhost:8080/app/v1/huespedes/delete/4 |
 
+### GET
+<image src="https://github.com/monnsmonsh/API-REST-OneToMany-Spring/blob/main/Resoucers/Method-Get_All.png" alt="Config spring">
+### POST
+<image src="https://github.com/monnsmonsh/API-REST-OneToMany-Spring/blob/main/Resoucers/Method-Post.png" alt="Config spring">
+### PUT
+<image src="https://github.com/monnsmonsh/API-REST-OneToMany-Spring/blob/main/Resoucers/Method-Put.png" alt="Config spring">
+### DELETE
+<image src="https://github.com/monnsmonsh/API-REST-OneToMany-Spring/blob/main/Resoucers/Method-Delete.png" alt="Config spring">
+
+
+> **PARA VISUALIAZAR LA BASE DE DATOS**
+>> - Recuerda que la creamos por medio de `H2 DataBase`
+
+
+## Base de datos **H2 DataBase**
