@@ -68,7 +68,7 @@ Ya creado  ahora nos reta crear nuestras propiedades, ya que posteriormente `spr
     private List<Reservation> reservations = new ArrayList<>();
 
 ```
-Para definir las relacionacion primero tenemos que tener en claro que tipo de relacion  tienen nuestra entidad en este caso es `@@OneToMany` y  le indicamos que es una `cascade = CascadeType.ALL` para que con JPA y persistence se encargen de la relacion de la bd, es decir que si nosotros eliminamos un huespet todas sus resevaciones se iran con el y para relacionar esto tenemos que crear un *ARRAY* donde almacenaremos la inforamcion de todas la reservas y lo definimos que sea un tipo lista.
+Para definir las relacionacion primero tenemos que tener en claro que tipo de relacion  tienen nuestra entidad en este caso es `@OneToMany` y  le indicamos que es una `cascade = CascadeType.ALL` para que con JPA y persistence se encargen de la relacion de la bd, es decir que si nosotros eliminamos un huespet todas sus resevaciones se iran con el y para relacionar esto tenemos que crear un *ARRAY* donde almacenaremos la inforamcion de todas la reservas y lo definimos que sea un tipo lista.
 ```java
     //generamos nuestra relacion
     @OneToMany(cascade = CascadeType.ALL)
@@ -80,7 +80,9 @@ Para definir las relacionacion primero tenemos que tener en claro que tipo de re
 
 
 ## Creacion de repositorios
+Creamos un `package` dentro del paquete principal con el nombre `repository` en donde se almacena toda la logica de acceso a nuestra bd y sobre todo como va a funcionar **JPA** para almacenar y crear todos los metodos CRUD o metodos que nosotros necesitemos particularmente.
 
+Para comenzar agregaremos una clase de tipo interfaz a la que nosotros le indicamos que herede o extienda de `JPA`
 
 
 
