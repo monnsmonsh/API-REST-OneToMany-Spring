@@ -45,3 +45,33 @@ Lo que hace `hibernate` es que actulizara el esquema de nuestra bd para que coin
             enabled: true
 ```
 
+## Creacion de nuestros modelos
+Creamos un `package` dentro del paquete principal con el nombre `model` en donde almacenaremos nuestras entidades para que JPA ayude a crear directamente todos los campos y todo lo relacionado con la bd.
+
+Para crear un modelo lo primero que tenemos que hacer en colocar `@Entity` ya que le dice a la percistencia de java que es una entidad, posteriormente colocamos `@Data` que nos define nuestra clase como un flujo de informacion y ademas nos ayuda a crear los campos de una manera mas sencilla.
+
+Ya creado  ahora nos reta crear nuestras propiedades, ya que posteriormente `spring boot` con `JPA` creara toda la informacion relacionadad con la bd.
+
+```java
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idGuest;
+
+    private String name;
+    private String lastName;
+    private String birthDate;
+    private String nationality;
+    private String phone;
+
+    //generamos nuestra relacion
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Reservation> reservations = new ArrayList<>();
+
+```
+>
+
+
+
+
+
+
