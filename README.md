@@ -170,7 +170,7 @@ public class GuestController {
     }
 
     //DELETE
-    @DeleteMapping("delete/{}")
+    @DeleteMapping("delete/{id}")
     public void delete(@PathVariable Long id){
         guestService.deleteGuestById(id);
     }
