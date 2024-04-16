@@ -1,11 +1,17 @@
 # Como crear una API Rest con relacion en Spring
-En este repositorio se explica como crear API Rest en Spring Boot junto con su implementación CRUD para crear, leer, actualizar y eliminar huéspedes. 
+En este repositorio se explica como crear API Rest en Spring Boot junto con su implementación CRUD para crear, leer, actualizar y eliminar, que implementa una relación uno a muchos entre dos entidades. Utiliza una base de datos H2 en memoria para almacenar los datos.
+
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+
+
+## Descripción
+La API REST permite gestionar entidades de tipo "padre" y "hijo", donde un "padre" puede tener múltiples "hijos". Proporciona endpoints para crear, leer, actualizar y eliminar tanto padres como hijos.
+
 
 ## 🛠 Skills
 Java, sprintboot, mysql
@@ -200,4 +206,4 @@ public class GuestController {
 >> - Recuerda que la creamos por medio de `H2 DataBase`
 
 
-## Base de datos **H2 DataBase**
+
