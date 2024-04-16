@@ -172,7 +172,7 @@ public class GuestController {
 }
 
 ```
-
-
+> **NOTA**
+>> - Recuerda que al crear y realizar seteamos por medio de un `id` *Lombok*  nos lo crea en tiempo real sin necesidad de escrir el codigo en nuestro modelo (setter & getter).
 
 
