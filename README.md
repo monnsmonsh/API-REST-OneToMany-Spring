@@ -82,8 +82,17 @@ Para definir las relacionacion primero tenemos que tener en claro que tipo de re
 ## Creacion de repositorios
 Creamos un `package` dentro del paquete principal con el nombre `repository` en donde se almacena toda la logica de acceso a nuestra bd y sobre todo como va a funcionar **JPA** para almacenar y crear todos los metodos CRUD o metodos que nosotros necesitemos particularmente.
 
-Para comenzar agregaremos una clase de tipo interfaz a la que nosotros le indicamos que herede o extienda de `JPA`
+Para comenzar agregaremos una clase de tipo interfaz a la que nosotros le indicamos que herede o extienda de `JPA` repository, ademas de agregar como va a funcionar JpaRepository (tipo de dato principal).
 
+```java
+public interface IGuestRepository extends JpaRepository<Guest,Long>{
+
+}
+```
+
+> **NOTA**
+>> Para la creacion de interfaz se inicia con ""I"".
+>> Al utilizar *JpaRepository* nos evitamos crear manualmente el CRUD o el find byId de nuestra bd.
 
 
 
