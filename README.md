@@ -14,7 +14,7 @@ Para poder crear una api en java con sprint, lo primero que necesitamos es confi
 Las dependecias seran:
   - **Spring Web:** nos ayuda ejecutar y a utlizar todas las tecnologias de springweb (API Rest) y crea nuestro servidor en Tomcat
   - **Spring Data JPA:** nos permite manejar la bd mediante `hibernate` y `Spring Data` mediante la persistencia
-  - **Lombok:** nos ayuda a disminuir el codigo de los entitys de nuestras tablas (`getters` & `setters`)
+  - **Lombok:** nos ayuda a disminuir el codigo de los entitys de nuestras tablas `getters` & `setters`
   - **H2 DataBase:** es una bd que esta integrada en nuestra aplicacion
 
 <image src="https://github.com/monnsmonsh/API-REST-OneToMany-Spring/blob/main/Resoucers/config_spring.png" alt="Config spring">
